@@ -148,7 +148,7 @@
     }
 
     function fetchNamesForToday() {
-      fetch('https://script.google.com/macros/s/AKfycbxN1B8EyM8_gTzOH2KF4J_1iphmz08C6lB4TGcBWA9Wa60fW9OkNuOeFT9kPpC09z2B/exec')
+      fetch('https://script.google.com/macros/s/AKfycby2GWpu3ZyoTeo6UFnn0Xry0DHoll1hwXfZXDcwGBRaiL-00FaM75brlUTgM9ci7EEF/exec')
         .then(response => response.json())
         .then(data => {
           const select = document.getElementById('ftgNameSelect');
@@ -165,8 +165,8 @@
         });
     }
 
-    const ftgURL = 'https://script.google.com/macros/s/AKfycbz0Qk4QMyMOOdpI-nebkTcc147A7w1O_eXJHweT74JnRrbVtRfDL5S_e2jcjmnDbPOS/exec';
-    const officeURL = 'https://script.google.com/macros/s/AKfycbwb8mb4cwDVZxPcaNRK4crgY6p0zkni5onj34uhrpFtYgU5kgl6VaYYLs7sJYdYOPMQ/exec';
+    const ftgURL = 'https://script.google.com/macros/s/AKfycbx4mR6H_6IMzdaOlt-aueQ5paoVbo8BvKGvdDsfDOuDgxLiev6xfeVCQRflFm0wxc7R/exec';
+    const officeURL = 'https://script.google.com/macros/s/AKfycbwNVmemu1-m3aWy9X8y5sgTZEQPct-6GGYm1VXEcYF-ZSXYlzM9Cetvh4X8wNSlZBF8/exec';
 
     document.getElementById('formFTG').addEventListener('submit', function(e) {
       e.preventDefault();
