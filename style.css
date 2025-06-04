@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --shadow: 0 .5rem 1rem rgb(0,0,0,.05);
   --blue: #0D99FF;
   --blue-light: #CFEBFF;
@@ -15,42 +15,37 @@
   --background: rgba(0, 3, 3, 0.82);
   --contact-color-hover: rgb(255, 130, 0);
   --contact-color: rgb(255, 156, 0);
-
   --rounded: .25rem;
   --rounded-md: .5rem;
 }
 
-body{
+body {
   background-color: rgb(255, 255, 255);
   line-height: 1.5;
   color: #000;
 }
 
-fieldset{
-  border-color: var(--blue-light);
-  padding: 1.5em;
-  border-radius: 12px;
-}
-
-.container{
+.container {
   max-width: 870px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2rem;
 }
 
-.container .wrapper{
+.container .wrapper {
   box-shadow: 0 0 20px 0 rgba(255,255,255,1);
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 20px;
   background-color: white;
 }
 
-.wrapper > *{
+.wrapper > * {
   padding: 1.5em;
 }
 
+/* Toggle buttons */
 .form-toggle {
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 2rem 0 1.5rem;
 }
 
 .form-toggle button {
@@ -75,11 +70,10 @@ fieldset{
   outline-offset: 2px;
 }
 
-
-/* ... (existing styles) ... */
+/* Submit buttons */
 button[type="submit"] {
   display: block;
-  margin: 2rem auto;
+  margin: 2rem auto 1rem;
   background-color: var(--blue);
   border: none;
   padding: 0.75rem 2rem;
@@ -94,201 +88,23 @@ button[type="submit"]:hover {
   background-color: var(--blue-dark);
 }
 
-.contact .head{
-    display: flex;
-    margin-bottom: 20px;
-    padding: 0;
-    justify-content:left;
-    align-items:center ;
-}
-
-.contact h3{
-  color: rgb(0, 0, 0);
-}
-
-
-
-img{
-  width: 90px;
-}
-
-/* FORM STYLE */
-.contact form{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-}
-
-.contact form label{
-  display: block;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.contact form .form-group{
-  margin: 0;
-}
-
-.contact form .full{
-  grid-column: 1 / 3;
-}
-
-.contact form button, .contact form input, .contact form textarea{
-  width: 100%;
-  padding: 1em;
-  outline: none;
-}
-
-.contact form input, .contact form textarea, select{
-  
-  border: 1px solid var(--blue);
-  border-radius: var(--rounded);
-/*  background-color: transparent;*/
-  transition: border 0.5s ease-in-out;
-}
-
-.contact form input:focus,
-.contact form textarea:focus,
-select:focus {
-  border-color: var(--blue-dark); 
-}
-
-select{
-  width: 100%;
-  padding: 1em;
-  outline: none;
-}
-
-select option{
-  background-color: var(--blue-light);
-  font-weight: 500;
-}
-
-.contact form textarea{
-  resize: none;
-  overflow-y: auto;
-}
-
-
-.btn-submit{
-  background-color: var(--blue);
-  text-decoration: none;
-  border: none;
-  border-radius: var(--rounded-md);
-  margin-bottom: 20px;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1em;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-
-.btn-submit:hover {
-  background-color: var(--blue-dark);
-}
-
-
-
-.form-toggle {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .form-toggle button {
-      background-color: var(--blue);
-      border: none;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      margin: 0 1rem;
-      font-size: 1rem;
-      font-weight: 600;
-      border-radius: var(--rounded-md);
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .form-toggle button:hover {
-      background-color: var(--blue-dark);
-    }
-    .form-toggle button:focus {
-      outline: 2px solid var(--blue-light);
-      outline-offset: 2px;
-    }
-    .password-modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.6);
-      justify-content: center;
-      align-items: center;
-    }
-    .password-modal-content {
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      text-align: center;
-    }
-    .password-modal input {
-      padding: 0.5rem;
-      margin-top: 1rem;
-      width: 100%;
-    }
-    .password-modal button {
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-    }
-
-
-
-
-/* **********CONTACT SETTINGS********** */
-
-
-.social-icons a
-{
-	text-decoration: none;
-	font-size: 25px;
-	margin-right: 20px;
-  color: #fff;
-  /* rgb(255, 156, 0); */
-	display: inline-block;
-	transition: transform 0.5s;
-}
-
-.social-icons a:hover
-{
-	transform: translateY(-3px);
-}
-
-
-footer{
+/* Contact header */
+.contact .head {
   display: flex;
-  flex-direction: column;
-  height: 70px;
-  color: #fff;
-  background-color: var(--blue-dark);
-  justify-content: center;
+  margin-bottom: 20px;
+  justify-content: left;
   align-items: center;
 }
 
-footer .social-icons a{
-  font-size: 15px;
-  margin-bottom: 10px;
+.contact h3 {
+  color: rgb(0, 0, 0);
 }
 
-.sign{
-  display: flex;
-  right: 30px;
-  bottom: 0;
-  font-size: 12px;
- 
+img {
+  width: 90px;
 }
 
-/* Stack form fields vertically */
+/* Form layout */
 .contact form {
   display: flex;
   flex-direction: column;
@@ -297,9 +113,33 @@ footer .social-icons a{
 
 .form-group.full {
   width: 100%;
+  margin-bottom: 1rem;
 }
 
-/* Enhance fieldset and legend */
+.contact form input,
+.contact form textarea,
+.contact form select {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--blue);
+  border-radius: var(--rounded);
+  transition: border 0.5s ease-in-out;
+  margin-bottom: 0.5rem;
+}
+
+.contact form input:focus,
+.contact form textarea:focus,
+select:focus {
+  border-color: var(--blue-dark);
+}
+
+.contact form textarea {
+  resize: none;
+  overflow-y: auto;
+}
+
+/* Legend and fieldset */
 form fieldset {
   border: 2px solid var(--blue);
   border-radius: 12px;
@@ -325,12 +165,7 @@ form legend i {
   color: var(--blue-dark);
 }
 
-/* Spacing between fields */
-.form-group.full {
-  margin-bottom: 1rem;
-}
-
-/* Password Modal Styling */
+/* Password modal */
 .password-modal {
   display: none;
   position: fixed;
@@ -352,40 +187,56 @@ form legend i {
   width: 90%;
   max-width: 400px;
   position: relative;
+  animation: fadeScaleIn 0.4s ease-out;
 }
 
 .password-modal input {
-  padding: 0.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  padding: 0.75rem;
   width: 100%;
   font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
-.password-modal button {
-  margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
+.password-modal button:not(.close-modal) {
+  background-color: var(--blue);
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
   font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.password-modal button:not(.close-modal):hover {
+  background-color: var(--blue-dark);
 }
 
 .password-modal .close-modal {
   position: absolute;
-  top: 10px;
+  top: 12px;
   right: 14px;
   font-size: 1.5rem;
+  font-weight: bold;
   background: transparent;
   border: none;
+  color: #555;
   cursor: pointer;
-  color: #333;
+  transition: color 0.2s;
+}
+
+.password-modal .close-modal:hover {
+  color: red;
 }
 
 .error-message {
   color: red;
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
   font-size: 0.95rem;
 }
 
-/* Modal fade-in animation */
+/* Animation */
 @keyframes fadeScaleIn {
   from {
     opacity: 0;
@@ -397,84 +248,68 @@ form legend i {
   }
 }
 
-.animate-modal {
-  animation: fadeScaleIn 0.4s ease-out;
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  height: 70px;
+  color: #fff;
+  background-color: var(--blue-dark);
+  justify-content: center;
+  align-items: center;
 }
 
+footer .social-icons a {
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 20px;
+  color: #fff;
+  display: inline-block;
+  transition: transform 0.5s;
+}
 
+footer .social-icons a:hover {
+  transform: translateY(-3px);
+}
 
+footer .sign {
+  font-size: 12px;
+}
 
-
-
-/* Large Screen */
-@media screen and (min-width: 780px){
-
-  body{
+/* Responsive */
+@media screen and (min-width: 780px) {
+  body {
     background-color: rgb(241, 243, 247);
-    line-height: 1.5;
-    color: #000;
   }
 
-  .container{
+  .container {
     margin-top: 50px;
     margin-bottom: 50px;
   }
 
-  .container .wrapper{
+  .container .wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     box-shadow: 0 0 20px 0 rgba(0,0,0,1);
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 20px;
   }
 
-
-  .contact{
+  .contact {
+    padding: 30px;
     border-radius: 0 20px 20px 0;
   }
 
-  .contact .head{
-    margin-bottom: 30px;
-}
-
-  .wrapper{
-    box-shadow: none;
-  }
-
-  .contact{
-    padding: 30px;
-  }
-
-  .social-box{
-    width: 100%;
-    margin-top: 40px;
-  }
-
-  .social-icons a{
-    font-size: 25px;
-  }
-
-  footer{
+  footer {
     height: 100px;
   }
 
-  footer .social-icons a{
+  footer .social-icons a {
     font-size: 20px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding-left: 30px;
+    margin: 0 10px;
   }
-  
-  footer .sign{
-    right: 30px;
-    padding-bottom: 5px;
-    margin-top: 5px;
+
+  footer .sign {
     font-size: 12px;
-    
+    padding-bottom: 5px;
   }
-
 }
-
-
-
-
-
