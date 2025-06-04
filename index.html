@@ -20,12 +20,12 @@
   <div class="container">
 
     
-   <!--  
+   
     <div class="form-toggle">
       <button id="ftgBtn">First Time Guest</button>
       <button id="officeBtn">Office Use</button>
     </div>
-    -->
+    
 
     <!-- Password Modal -->
     <div class="password-modal" id="passwordModal">
@@ -45,13 +45,8 @@
         </div>
 
 
-        <div class="form-toggle">
-          <button id="ftgBtn">First Time Guest</button>
-          <button id="officeBtn">Office Use</button>
-        </div>
 
-        <!-- <fieldset> -->
-          <!-- <legend> Fill the form </legend> -->
+        
 
             <form id="formFTG">
               <input type="text" name="NAME" placeholder="Full Name" required />
@@ -61,7 +56,10 @@
               <input type="text" name="PROFESSION" placeholder="Profession" required />
               <input type="text" name="DOB" placeholder="Birthday" />
               <input type="text" name="INVITED" placeholder="Invited By" />
-              <textarea name="SOCIAL" placeholder="Social Media IDs"></textarea>
+              <select name="MARITAL STATUS">
+                <option value="MARRIED">MARRIED</option>
+                <option value="SINGLE">SINGLE</option>
+              </select>
               <textarea name="ADDRESS" placeholder="Address"></textarea>
               <textarea name="BLESSED" placeholder="What Blessed You?"></textarea>
               <button type="submit">Submit FTG</button>
@@ -78,10 +76,7 @@
           <h3>Office Use Form</h3>
         </div>
 
-        <div class="form-toggle">
-          <button id="ftgBtn">First Time Guest</button>
-          <button id="officeBtn">Office Use</button>
-        </div>
+       
         
       
             <form id="formOffice">
@@ -91,13 +86,21 @@
               <input type="text" name="MINISTER" placeholder="Minister In Charge" required />
               <input type="text" name="LC_TEACHER" placeholder="Life Class Teacher" />
               <input type="text" name="HOD" placeholder="HOD In Charge" />
+              <select name="JOIN/NOT" id="status">
+                <option value="JOINED">JOINED</option>
+                <option value="DID NOT JOIN">DID NOT JOIN</option>
+              </select>
               <select name="DEPARTMENT">
                 <option value="">Select Department</option>
-                <option value="CHOIR">CHOIR</option>
-                <option value="MEDIA">MEDIA</option>
-                <option value="POWER & SOUND">POWER & SOUND</option>
-                <option value="USHERING">USHERING</option>
+                <option value="WORD SANCTUARY CHOIR">WORD SANCTUARY CHOIR</option>
+                <option value="WORD SANCTUARY DRAMATIST">WORD SANCTUARY DRAMATIST</option>
                 <option value="LOVE & CARE">LOVE & CARE</option>
+                <option value="POWER & SOUND">POWER & SOUND</option>
+                <option value="MEDIA">MEDIA</option>
+                <option value="USHERING">USHERING</option>
+                <option value="DECORATION">DECORATION</option>
+                <option value="DECORATION">ZOE</option>
+                <option value="DECORATION">EVANGELISM</option>
               </select>
               <textarea name="COMMENT" placeholder="Comment"></textarea>
               <button type="submit">Submit Office Data</button>
