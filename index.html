@@ -1,69 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Head -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/870995ee8f.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png"  href="./media-img/contact_back.jpeg">
+
   <title>FTG + Office Use Form</title>
-  <style>
-    .form-toggle {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .form-toggle button {
-      background-color: var(--blue);
-      border: none;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      margin: 0 1rem;
-      font-size: 1rem;
-      font-weight: 600;
-      border-radius: var(--rounded-md);
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .form-toggle button:hover {
-      background-color: var(--blue-dark);
-    }
-    .form-toggle button:focus {
-      outline: 2px solid var(--blue-light);
-      outline-offset: 2px;
-    }
-    .password-modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.6);
-      justify-content: center;
-      align-items: center;
-    }
-    .password-modal-content {
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      text-align: center;
-    }
-    .password-modal input {
-      padding: 0.5rem;
-      margin-top: 1rem;
-      width: 100%;
-    }
-    .password-modal button {
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-    }
-  </style>
-</head>
+ </head>
+
+
 <body>
   <div class="container">
+
+    
+   <!--  
     <div class="form-toggle">
       <button id="ftgBtn">First Time Guest</button>
       <button id="officeBtn">Office Use</button>
     </div>
+    -->
 
     <!-- Password Modal -->
     <div class="password-modal" id="passwordModal">
@@ -78,117 +40,87 @@
     <div class="wrapper" id="ftgForm">
       <div class="contact">
         <div class="head">
+          <img src="./media-img/logo.png" alt="logo">
           <h3>First Time Guest Form</h3>
         </div>
-        <form id="formFTG">
-          <input type="text" name="NAME" placeholder="Full Name" required />
-          <input type="email" name="EMAIL" placeholder="Email" required />
-          <input type="tel" name="PHONE" placeholder="Phone Number" required />
-          <input type="text" name="WHATSAPP" placeholder="WhatsApp Number" />
-          <input type="text" name="PROFESSION" placeholder="Profession" required />
-          <input type="text" name="DOB" placeholder="Birthday" />
-          <input type="text" name="INVITED" placeholder="Invited By" />
-          <textarea name="SOCIAL" placeholder="Social Media IDs"></textarea>
-          <textarea name="ADDRESS" placeholder="Address"></textarea>
-          <textarea name="BLESSED" placeholder="What Blessed You?"></textarea>
-          <button type="submit">Submit FTG</button>
-        </form>
+
+
+        <div class="form-toggle">
+          <button id="ftgBtn">First Time Guest</button>
+          <button id="officeBtn">Office Use</button>
+        </div>
+
+        <!-- <fieldset> -->
+          <!-- <legend> Fill the form </legend> -->
+
+            <form id="formFTG">
+              <input type="text" name="NAME" placeholder="Full Name" required />
+              <input type="email" name="EMAIL" placeholder="Email" required />
+              <input type="tel" name="PHONE" placeholder="Phone Number" required />
+              <input type="tel" name="WHATSAPP" placeholder="WhatsApp Number" />
+              <input type="text" name="PROFESSION" placeholder="Profession" required />
+              <input type="text" name="DOB" placeholder="Birthday" />
+              <input type="text" name="INVITED" placeholder="Invited By" />
+              <textarea name="SOCIAL" placeholder="Social Media IDs"></textarea>
+              <textarea name="ADDRESS" placeholder="Address"></textarea>
+              <textarea name="BLESSED" placeholder="What Blessed You?"></textarea>
+              <button type="submit">Submit FTG</button>
+            </form>
+       
       </div>
     </div>
-
+ 
     <!-- OFFICE USE FORM -->
     <div class="wrapper" id="officeForm" style="display: none;">
       <div class="contact">
         <div class="head">
+          <img src="./media-img/logo.png" alt="logo">
           <h3>Office Use Form</h3>
         </div>
-        <form id="formOffice">
-          <select name="FTG_NAME" id="ftgNameSelect">
-            <option value="">Loading names...</option>
-          </select>
-          <input type="text" name="MINISTER" placeholder="Minister In Charge" required />
-          <input type="text" name="LC_TEACHER" placeholder="Life Class Teacher" />
-          <input type="text" name="HOD" placeholder="HOD In Charge" />
-          <select name="DEPARTMENT">
-            <option value="">Select Department</option>
-            <option value="CHOIR">CHOIR</option>
-            <option value="MEDIA">MEDIA</option>
-            <option value="POWER & SOUND">POWER & SOUND</option>
-            <option value="USHERING">USHERING</option>
-            <option value="LOVE & CARE">LOVE & CARE</option>
-          </select>
-          <textarea name="COMMENT" placeholder="Comment"></textarea>
-          <button type="submit">Submit Office Data</button>
-        </form>
+
+        <div class="form-toggle">
+          <button id="ftgBtn">First Time Guest</button>
+          <button id="officeBtn">Office Use</button>
+        </div>
+        
+      
+            <form id="formOffice">
+              <select name="FTG_NAME" id="ftgNameSelect">
+                <option value="">Loading names...</option>
+              </select>
+              <input type="text" name="MINISTER" placeholder="Minister In Charge" required />
+              <input type="text" name="LC_TEACHER" placeholder="Life Class Teacher" />
+              <input type="text" name="HOD" placeholder="HOD In Charge" />
+              <select name="DEPARTMENT">
+                <option value="">Select Department</option>
+                <option value="CHOIR">CHOIR</option>
+                <option value="MEDIA">MEDIA</option>
+                <option value="POWER & SOUND">POWER & SOUND</option>
+                <option value="USHERING">USHERING</option>
+                <option value="LOVE & CARE">LOVE & CARE</option>
+              </select>
+              <textarea name="COMMENT" placeholder="Comment"></textarea>
+              <button type="submit">Submit Office Data</button>
+            </form>
+     
       </div>
     </div>
   </div>
 
-  <script>
-    document.getElementById('ftgBtn').onclick = () => {
-      document.getElementById('ftgForm').style.display = 'block';
-      document.getElementById('officeForm').style.display = 'none';
-    };
 
-    document.getElementById('officeBtn').onclick = () => {
-      document.getElementById('passwordModal').style.display = 'flex';
-    };
+ <footer>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/wordsanctuarypage/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/word_sanctuary"><i class="fa-brands fa-twitter-square"></i></a>
+            <a href="https://www.instagram.com/wordsanctuaryglobal/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@WordSanctuaryTV"><i class="fa-brands fa-youtube"></i></a>
+      </div>
 
-    function checkPassword() {
-      const password = document.getElementById('officePassword').value;
-      if (password === 'WSLoffice') {
-        document.getElementById('passwordModal').style.display = 'none';
-        document.getElementById('ftgForm').style.display = 'none';
-        document.getElementById('officeForm').style.display = 'block';
-        fetchNamesForToday();
-      } else {
-        alert('Incorrect password');
-        document.getElementById('officePassword').value = '';
-      }
-    }
+      <div class="sign">
+        Word Sanctuary Lagos &copy; Copyright 2025.
+      </div>
+  </footer>
 
-    function fetchNamesForToday() {
-      fetch('https://script.google.com/macros/s/AKfycby2GWpu3ZyoTeo6UFnn0Xry0DHoll1hwXfZXDcwGBRaiL-00FaM75brlUTgM9ci7EEF/exec')
-        .then(response => response.json())
-        .then(data => {
-          const select = document.getElementById('ftgNameSelect');
-          select.innerHTML = '<option value="">Select FTG Name</option>';
-          data.forEach(name => {
-            const opt = document.createElement('option');
-            opt.value = name;
-            opt.textContent = name;
-            select.appendChild(opt);
-          });
-        })
-        .catch(err => {
-          console.error('Failed to fetch names', err);
-        });
-    }
-
-    const ftgURL = 'https://script.google.com/macros/s/AKfycbx4mR6H_6IMzdaOlt-aueQ5paoVbo8BvKGvdDsfDOuDgxLiev6xfeVCQRflFm0wxc7R/exec';
-    const officeURL = 'https://script.google.com/macros/s/AKfycbwNVmemu1-m3aWy9X8y5sgTZEQPct-6GGYm1VXEcYF-ZSXYlzM9Cetvh4X8wNSlZBF8/exec';
-
-    document.getElementById('formFTG').addEventListener('submit', function(e) {
-      e.preventDefault();
-      fetch(ftgURL, {
-        method: 'POST',
-        body: new FormData(this)
-      }).then(res => {
-        alert('FTG Data Submitted');
-        this.reset();
-      }).catch(err => alert('Error submitting FTG data'));
-    });
-
-    document.getElementById('formOffice').addEventListener('submit', function(e) {
-      e.preventDefault();
-      fetch(officeURL, {
-        method: 'POST',
-        body: new FormData(this)
-      }).then(res => {
-        alert('Office Use Data Submitted');
-        this.reset();
-      }).catch(err => alert('Error submitting Office Use data'));
-    });
-  </script>
+  <script src="form.js"></script>
 </body>
 </html>
