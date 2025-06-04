@@ -128,11 +128,25 @@ img {
   margin-bottom: 0.5rem;
 }
 
+.contact form input,
+.contact form textarea,
+.contact form select {
+  border: 1px solid var(--blue);
+  border-radius: var(--rounded);
+  background-color: white;
+  color: black;
+}
+
+/* Fix for border turning black on focus */
 .contact form input:focus,
 .contact form textarea:focus,
-select:focus {
-  border-color: var(--blue-dark);
+.contact form select:focus {
+  border: 2px solid var(--blue-dark);
+  outline: none;
+  background-color: white;
+  color: black;
 }
+
 
 .contact form textarea {
   resize: none;
@@ -191,11 +205,24 @@ form legend i {
 }
 
 .password-modal input {
+  background-color: white;
+  color: black;
+  border: 1px solid var(--blue);
+  border-radius: var(--rounded);
+  font-size: 1rem;
   padding: 0.75rem;
   width: 100%;
-  font-size: 1rem;
   margin-bottom: 1rem;
+  transition: border-color 0.3s ease;
 }
+
+.password-modal input:focus {
+  border: 2px solid var(--blue-dark);
+  outline: none;
+  background-color: white;
+  color: black;
+}
+
 
 .password-modal button:not(.close-modal) {
   background-color: var(--blue);
