@@ -1,38 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Head -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <script src="https://kit.fontawesome.com/870995ee8f.js" crossorigin="anonymous"></script>
-  <link rel="icon" type="image/png"  href="./media-img/contact_back.jpeg">
-
+  <link rel="icon" type="image/png" href="./media-img/contact_back.jpeg">
   <title>FTG + Office Use Form</title>
- </head>
-
-
+</head>
 <body>
   <div class="container">
 
-    
-   
+    <!-- Toggle Buttons -->
     <div class="form-toggle">
       <button id="ftgBtn">First Time Guest</button>
       <button id="officeBtn">Office Use</button>
     </div>
-    
 
     <!-- Password Modal -->
     <div class="password-modal" id="passwordModal">
-      <div class="password-modal-content">
+      <div class="password-modal-content animate-modal">
+        <button class="close-modal" onclick="closePasswordModal()">×</button>
         <h3>Enter Password to Access Office Use Form</h3>
         <input type="password" id="officePassword" placeholder="Password" />
         <button onclick="checkPassword()">Submit</button>
+        <p id="passwordError" class="error-message"></p>
       </div>
     </div>
 
@@ -43,53 +36,57 @@
           <img src="./media-img/logo.png" alt="logo">
           <h3>First Time Guest Form</h3>
         </div>
-
-
-
-        
-
-            <form id="formFTG">
-              <input type="text" name="NAME" placeholder="Full Name" required />
-              <input type="email" name="EMAIL" placeholder="Email" required />
-              <input type="tel" name="PHONE" placeholder="Phone Number" required />
-              <input type="tel" name="WHATSAPP" placeholder="WhatsApp Number" />
-              <input type="text" name="PROFESSION" placeholder="Profession" required />
-              <input type="text" name="DOB" placeholder="Birthday" />
-              <input type="text" name="INVITED" placeholder="Invited By" />
+        <form id="formFTG">
+          <fieldset>
+            <legend><i class="fa-solid fa-church"></i> Fill the form</legend>
+            <div class="form-group full"><input type="text" name="NAME" placeholder="Full Name" required /></div>
+            <div class="form-group full"><input type="email" name="EMAIL" placeholder="Email" required /></div>
+            <div class="form-group full"><input type="tel" name="PHONE" placeholder="Phone Number" required /></div>
+            <div class="form-group full"><input type="tel" name="WHATSAPP" placeholder="WhatsApp Number" /></div>
+            <div class="form-group full"><input type="text" name="PROFESSION" placeholder="Profession" required /></div>
+            <div class="form-group full"><input type="text" name="DOB" placeholder="Birthday" /></div>
+            <div class="form-group full"><input type="text" name="INVITED" placeholder="Invited By" /></div>
+            <div class="form-group full">
               <select name="MARITAL STATUS">
                 <option value="MARRIED">MARRIED</option>
                 <option value="SINGLE">SINGLE</option>
               </select>
-              <textarea name="ADDRESS" placeholder="Address"></textarea>
-              <textarea name="BLESSED" placeholder="What Blessed You?"></textarea>
+            </div>
+            <div class="form-group full"><textarea name="ADDRESS" placeholder="Address"></textarea></div>
+            <div class="form-group full"><textarea name="BLESSED" placeholder="What Blessed You?"></textarea></div>
+            <div class="form-group full">
               <button type="submit">Submit FTG</button>
-            </form>
-       
+            </div>
+          </fieldset>
+        </form>
       </div>
     </div>
- 
-    <!-- OFFICE USE FORM -->
+
+    <!-- OFFICE FORM -->
     <div class="wrapper" id="officeForm" style="display: none;">
       <div class="contact">
         <div class="head">
           <img src="./media-img/logo.png" alt="logo">
           <h3>Office Use Form</h3>
         </div>
-
-       
-        
-      
-            <form id="formOffice">
+        <form id="formOffice">
+          <fieldset>
+            <legend><i class="fa-solid fa-church"></i> Fill the form</legend>
+            <div class="form-group full">
               <select name="FTG_NAME" id="ftgNameSelect">
                 <option value="">Loading names...</option>
               </select>
-              <input type="text" name="MINISTER" placeholder="Minister In Charge" required />
-              <input type="text" name="LC_TEACHER" placeholder="Life Class Teacher" />
-              <input type="text" name="HOD" placeholder="HOD In Charge" />
+            </div>
+            <div class="form-group full"><input type="text" name="MINISTER" placeholder="Minister In Charge" required /></div>
+            <div class="form-group full"><input type="text" name="LC_TEACHER" placeholder="Life Class Teacher" /></div>
+            <div class="form-group full"><input type="text" name="HOD" placeholder="HOD In Charge" /></div>
+            <div class="form-group full">
               <select name="JOIN/NOT" id="status">
                 <option value="JOINED">JOINED</option>
                 <option value="DID NOT JOIN">DID NOT JOIN</option>
               </select>
+            </div>
+            <div class="form-group full">
               <select name="DEPARTMENT">
                 <option value="">Select Department</option>
                 <option value="WORD SANCTUARY CHOIR">WORD SANCTUARY CHOIR</option>
@@ -99,29 +96,29 @@
                 <option value="MEDIA">MEDIA</option>
                 <option value="USHERING">USHERING</option>
                 <option value="DECORATION">DECORATION</option>
-                <option value="DECORATION">ZOE</option>
-                <option value="DECORATION">EVANGELISM</option>
+                <option value="ZOE">ZOE</option>
+                <option value="EVANGELISM">EVANGELISM</option>
               </select>
-              <textarea name="COMMENT" placeholder="Comment"></textarea>
+            </div>
+            <div class="form-group full"><textarea name="COMMENT" placeholder="Comment"></textarea></div>
+            <div class="form-group full">
               <button type="submit">Submit Office Data</button>
-            </form>
-     
+            </div>
+          </fieldset>
+        </form>
       </div>
     </div>
   </div>
 
-
- <footer>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/wordsanctuarypage/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://twitter.com/word_sanctuary"><i class="fa-brands fa-twitter-square"></i></a>
-            <a href="https://www.instagram.com/wordsanctuaryglobal/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@WordSanctuaryTV"><i class="fa-brands fa-youtube"></i></a>
-      </div>
-
-      <div class="sign">
-        Word Sanctuary Lagos &copy; Copyright 2025.
-      </div>
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/wordsanctuarypage/"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://twitter.com/word_sanctuary"><i class="fa-brands fa-twitter-square"></i></a>
+      <a href="https://www.instagram.com/wordsanctuaryglobal/"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@WordSanctuaryTV"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div class="sign">Word Sanctuary Lagos &copy; Copyright 2025.</div>
   </footer>
 
   <script src="form.js"></script>
